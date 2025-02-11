@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>You're My Valentine!</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Load canvas-confetti from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <!-- Replace 'your-gif-url.jpg' with your celebration gif or photo URL -->
-  <img src="ofcourse.jpg">
+  <img src="your-gif-url.jpg" alt="Celebration GIF">
   <h1>Yay! I knew you'd say yes! ❤️</h1>
+  
+  <script>
+    // Trigger confetti on page load
+    window.onload = function() {
+      // Wait a moment before launching confetti
+      setTimeout(function() {
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }, 500);
+    };
+  </script>
 </body>
 </html>

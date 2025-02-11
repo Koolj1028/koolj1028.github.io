@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* General page styling */
+body {
+  background-color: #a2d2ff; /* baby blue */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+/* Ensure responsiveness for mobile devices */
+img {
+  max-width: 80%;  /* Responsive image size */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Headings for better readability on small screens */
+h1 {
+  font-size: 2em;
+  margin: 20px 10px;
+}
+
+/* Button container to add spacing */
+.button-container {
+  margin-top: 30px;
+}
+
+/* General button styling */
+.btn {
+  font-size: 1.8em; /* Bigger text for accessibility */
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Specific styles for smaller buttons (if needed) */
+.btn-no {
+  font-size: 0.8em; /* Smaller button text */
+  padding: 8px 16px;
+}

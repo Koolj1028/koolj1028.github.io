@@ -40,7 +40,7 @@ h1 {
   color: white;
 }
 
-/* Smaller button styling for the No option on certain pages */
+/* Smaller button styling for the No option on specific pages */
 .btn-no {
   font-size: 0.8em;
   padding: 8px 16px;
@@ -48,11 +48,19 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #ff6b6b;  /* ensure this is set */
-  color: white;              /* ensure this is set */
+  background-color: #ff6b6b;
+  color: white;
 }
 
-/* Media query for mobile adjustments */
+/* Bouncing heart style */
+#bouncing-heart {
+  position: absolute;
+  font-size: 3em; /* adjust size as needed */
+  pointer-events: none; /* allows clicks to pass through */
+  z-index: 1000;
+}
+
+/* Mobile adjustments */
 @media (max-width: 480px) {
   body {
     padding: 20px;
@@ -64,11 +72,10 @@ h1 {
     font-size: 1.5em;
     padding: 15px 25px;
   }
-  /* Adjust .btn-no so it doesn’t lose its styling on smaller screens */
   .btn-no {
-    font-size: 1.2em;      /* Increase font-size slightly for clarity */
-    padding: 10px 20px;    /* Adjust padding for a better touch target */
-    background-color: #ff6b6b; /* Reassert background-color */
-    color: white;             /* Reassert text color */
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
   }
 }

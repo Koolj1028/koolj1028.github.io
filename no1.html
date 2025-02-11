@@ -7,12 +7,47 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Bouncing heart element -->
+  <div id="bouncing-heart">❤️</div>
+  
   <!-- Replace 'your-gif-url.jpg' with your actual gif or photo URL -->
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNvOXQzcWVpcXR6NWlkaWRyeDI2dTV0b2gwMml4ZXF4ZW81ZHlyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11tTNkNy1SdXGg/giphy.gif">
-  <h1>I can't believe you?! I thought you were with me forever! Don't press it again!</h1>
+  <h1>I can't believe you think no?! Don't do it again!</h1>
   <div class="button-container">
     <button class="btn" onclick="location.href='success.html'">Yes</button>
     <button class="btn" onclick="location.href='no2.html'">No</button>
   </div>
+  
+  <!-- Bouncing heart animation script -->
+  <script>
+    window.addEventListener("load", function() {
+      var heart = document.getElementById("bouncing-heart");
+      if (!heart) return;
+      var posX = 0;
+      var posY = 0;
+      var dx = 3;
+      var dy = 3;
+      function animate() {
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var heartWidth = heart.offsetWidth;
+        var heartHeight = heart.offsetHeight;
+        posX += dx;
+        posY += dy;
+        if (posX < 0 || posX + heartWidth > windowWidth) {
+          dx = -dx;
+          posX += dx;
+        }
+        if (posY < 0 || posY + heartHeight > windowHeight) {
+          dy = -dy;
+          posY += dy;
+        }
+        heart.style.left = posX + "px";
+        heart.style.top = posY + "px";
+        requestAnimationFrame(animate);
+      }
+      animate();
+    });
+  </script>
 </body>
 </html>

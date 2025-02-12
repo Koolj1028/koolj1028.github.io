@@ -13,16 +13,17 @@
   <!-- Replace 'your-gif-url.jpg' with your celebration gif or photo URL -->
   <img src="ofcourse.jpg">
   <h1>Yay! I knew you'd say yes! ❤️</h1>
+  <div class="button-container">
+    <!-- Restart Button -->
+    <button class="btn" onclick="location.href='index.html'">Restart</button>
+  </div>
   
   <!-- Bouncing heart animation script -->
   <script>
     window.addEventListener("load", function() {
       var heart = document.getElementById("bouncing-heart");
       if (!heart) return;
-      var posX = 0;
-      var posY = 0;
-      var dx = 3;
-      var dy = 3;
+      var posX = 0, posY = 0, dx = 3, dy = 3;
       function animate() {
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
